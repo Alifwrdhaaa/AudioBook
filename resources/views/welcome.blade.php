@@ -194,10 +194,10 @@
             .mobile-hero-p { background: transparent !important; border: none !important; box-shadow: none !important; padding-left: 0 !important; padding-right: 0 !important; }
             .mobile-graphic-container { margin-top: 3rem; margin-bottom: 2rem; }
             .mobile-trophy { top: -10px !important; left: -10px !important; }
-            .mobile-node-1 { left: 20% !important; }
-            .mobile-node-2 { left: 70% !important; }
-            .mobile-node-3 { left: 20% !important; }
-            .mobile-node-4 { left: 70% !important; }
+            .mobile-node-1 { left: calc(50% - 85px) !important; }
+            .mobile-node-2 { left: calc(50% + 85px) !important; }
+            .mobile-node-3 { left: calc(50% - 85px) !important; }
+            .mobile-node-4 { left: calc(50% + 85px) !important; }
             .mobile-node-text { font-size: 0.65rem !important; padding: 0.1rem 0.4rem !important; }
         }
     </style>
