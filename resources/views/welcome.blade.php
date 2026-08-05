@@ -189,8 +189,14 @@
     <!-- Navbar -->
     <style>
         @media (max-width: 768px) {
-            .mobile-nav-pad { padding-left: 1rem; padding-right: 1rem; }
-            .mobile-btn { font-size: 0.75rem !important; padding-left: 1rem !important; padding-right: 1rem !important; }
+            .mobile-nav-pad { padding-left: 1.25rem !important; padding-right: 1.25rem !important; }
+            .mobile-logo { font-size: 1.35rem !important; letter-spacing: -0.025em; }
+            .mobile-btn { 
+                font-size: 0.85rem !important; 
+                padding: 0.5rem 1.25rem !important; 
+                border-radius: 9999px !important;
+                box-shadow: 0 4px 0 0 #388201, 0 8px 15px rgba(88,204,2,0.3) !important;
+            }
             .mobile-hero-p { background: transparent !important; border: none !important; box-shadow: none !important; padding-left: 0 !important; padding-right: 0 !important; }
             .mobile-graphic-container { margin-top: 3rem; margin-bottom: 2rem; }
             .mobile-trophy { top: -10px !important; left: -10px !important; }
@@ -206,8 +212,8 @@
             
             <!-- Logo -->
             <div class="flex items-center">
-                <a href="#" class="text-lg md:text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#58CC02] to-[#1CB0F6] tracking-tight hover:scale-105 transition-transform flex items-center gap-1 md:gap-2 drop-shadow-sm">
-                    BelajarOnline <span class="text-base md:text-2xl filter drop-shadow-md">✨</span>
+                <a href="#" class="text-xl md:text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#58CC02] to-[#1CB0F6] tracking-tight hover:scale-105 transition-transform flex items-center gap-1 md:gap-2 drop-shadow-sm mobile-logo">
+                    BelajarOnline <span class="text-lg md:text-2xl filter drop-shadow-md">✨</span>
                 </a>
             </div>
             
