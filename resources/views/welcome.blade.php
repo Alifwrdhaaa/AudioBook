@@ -194,10 +194,10 @@
             .mobile-hero-p { background: transparent !important; border: none !important; box-shadow: none !important; padding-left: 0 !important; padding-right: 0 !important; }
             .mobile-graphic-container { margin-top: 3rem; margin-bottom: 2rem; }
             .mobile-trophy { top: -10px !important; left: -10px !important; }
-            .mobile-node-1 { left: calc(50% - 55px) !important; }
-            .mobile-node-2 { left: calc(50% + 55px) !important; }
-            .mobile-node-3 { left: calc(50% - 55px) !important; }
-            .mobile-node-4 { left: calc(50% + 55px) !important; }
+            .mobile-node-1 { left: 15% !important; }
+            .mobile-node-2 { left: 85% !important; }
+            .mobile-node-3 { left: 15% !important; }
+            .mobile-node-4 { left: 85% !important; }
             .mobile-node-text { font-size: 0.65rem !important; padding: 0.1rem 0.4rem !important; }
         }
     </style>
@@ -327,25 +327,25 @@
                 <div class="map-path-line"></div>
                 
                 <!-- Node 1 -->
-                <div class="absolute top-[0%] left-[20%] transform -translate-x-1/2 -translate-y-1/2 z-10 wave-icon-1 mobile-node-1">
+                <div class="absolute top-[0%] left-[20%] transform -translate-x-1/2 -translate-y-1/2 z-10 wave-icon-1 mobile-node-1 flex flex-col items-center w-[120px]">
                     <div class="w-[80px] h-[80px] bg-[#1CB0F6] rounded-full shadow-[0_6px_0_0_#1899D6] border-4 border-white flex items-center justify-center text-3xl">📖</div>
                     <div class="mt-2 text-center font-black text-gray-700 uppercase tracking-widest text-xs bg-white/80 rounded-full px-2 py-1 shadow-sm mobile-node-text">Buku Sihir</div>
                 </div>
                 
                 <!-- Node 2 -->
-                <div class="absolute top-[30%] left-[80%] transform -translate-x-1/2 -translate-y-1/2 z-10 wave-icon-2 mobile-node-2">
+                <div class="absolute top-[30%] left-[80%] transform -translate-x-1/2 -translate-y-1/2 z-10 wave-icon-2 mobile-node-2 flex flex-col items-center w-[120px]">
                     <div class="w-[80px] h-[80px] bg-[#CE82FF] rounded-full shadow-[0_6px_0_0_#A568CC] border-4 border-white flex items-center justify-center text-3xl">🎧</div>
                     <div class="mt-2 text-center font-black text-gray-700 uppercase tracking-widest text-xs bg-white/80 rounded-full px-2 py-1 shadow-sm mobile-node-text">Bisikan Peri</div>
                 </div>
                 
                 <!-- Node 3 -->
-                <div class="absolute top-[65%] left-[15%] transform -translate-x-1/2 -translate-y-1/2 z-10 wave-icon-3 mobile-node-3">
+                <div class="absolute top-[65%] left-[15%] transform -translate-x-1/2 -translate-y-1/2 z-10 wave-icon-3 mobile-node-3 flex flex-col items-center w-[120px]">
                     <div class="w-[90px] h-[90px] bg-[#FF4B4B] rounded-full shadow-[0_6px_0_0_#E53935] border-[5px] border-white flex items-center justify-center text-4xl heartbeat">📺</div>
                     <div class="mt-2 text-center font-black text-gray-700 uppercase tracking-widest text-xs bg-white/80 rounded-full px-2 py-1 shadow-sm mobile-node-text">Kristal Visi</div>
                 </div>
                 
                 <!-- Node 4 -->
-                <div class="absolute top-[100%] left-[75%] transform -translate-x-1/2 -translate-y-1/2 z-10 wave-icon-4 mobile-node-4">
+                <div class="absolute top-[100%] left-[75%] transform -translate-x-1/2 -translate-y-1/2 z-10 wave-icon-4 mobile-node-4 flex flex-col items-center w-[120px]">
                     <div class="w-[80px] h-[80px] bg-[#58CC02] rounded-full shadow-[0_6px_0_0_#46A302] border-4 border-white flex items-center justify-center text-3xl opacity-50 grayscale">📝</div>
                     <div class="mt-2 text-center font-black text-gray-400 uppercase tracking-widest text-xs bg-gray-100 rounded-full px-2 py-1 shadow-sm mobile-node-text">Ujian Bos</div>
                 </div>
