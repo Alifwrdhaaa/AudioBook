@@ -192,7 +192,8 @@
             .mobile-nav-pad { padding-left: 1rem; padding-right: 1rem; }
             .mobile-btn { font-size: 0.75rem !important; padding-left: 1rem !important; padding-right: 1rem !important; }
             .mobile-hero-p { background: transparent !important; border: none !important; box-shadow: none !important; padding-left: 0 !important; padding-right: 0 !important; }
-            .mobile-graphic-scale { transform: scale(0.6); margin-top: -2rem; }
+            .mobile-graphic-container { margin-top: 3rem; margin-bottom: 2rem; }
+            .mobile-trophy { top: -10px !important; left: -10px !important; }
         }
     </style>
     <nav class="w-full bg-white/90 backdrop-blur-md border-b-4 border-gray-200 sticky top-0 z-50 transition-all shadow-sm">
@@ -273,7 +274,7 @@
             </div>
             
             <!-- Graphic / Illustration -->
-            <div class="md:w-1/2 flex justify-center relative z-10 w-full mobile-graphic-scale">
+            <div class="md:w-1/2 flex justify-center relative z-10 w-full mobile-graphic-container">
                 <!-- Orbit Ring -->
                 <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] md:w-[480px] md:h-[480px] border-[6px] border-dashed border-[#58CC02]/30 rounded-full animate-spin-slow" style="animation-duration: 30s;"></div>
                 
@@ -291,7 +292,7 @@
                     🔥
                 </div>
                 
-                <div class="absolute top-20 left-10 md:-left-5 w-24 h-24 bg-[#FF4B4B] rounded-[2rem] -rotate-6 shadow-[0_8px_0_0_#E53935] flex items-center justify-center text-white text-5xl z-30 border-4 border-white opacity-90" style="animation: hover-float 6s ease-in-out infinite 2s;">
+                <div class="absolute top-20 left-10 md:-left-5 w-24 h-24 bg-[#FF4B4B] rounded-[2rem] -rotate-6 shadow-[0_8px_0_0_#E53935] flex items-center justify-center text-white text-5xl z-30 border-4 border-white opacity-90 mobile-trophy" style="animation: hover-float 6s ease-in-out infinite 2s;">
                     🏆
                 </div>
             </div>
