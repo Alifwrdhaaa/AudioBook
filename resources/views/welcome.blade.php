@@ -86,19 +86,19 @@
             animation: progress-stripes 1s linear infinite;
         }
         @keyframes wave-jump {
-            0%, 40%, 100% { transform: translateY(0); }
-            20% { transform: translateY(-15px); }
+            0%, 40%, 100% { transform: translate(-50%, -50%); }
+            20% { transform: translate(-50%, calc(-50% - 15px)); }
         }
         .wave-icon-1 { display: inline-block; animation: wave-jump 2.5s infinite 0.1s; }
         .wave-icon-2 { display: inline-block; animation: wave-jump 2.5s infinite 0.25s; }
         .wave-icon-3 { display: inline-block; animation: wave-jump 2.5s infinite 0.4s; }
         .wave-icon-4 { display: inline-block; animation: wave-jump 2.5s infinite 0.55s; }
         @keyframes pulse-heartbeat {
-            0% { transform: scale(1); }
-            14% { transform: scale(1.2); }
-            28% { transform: scale(1); }
-            42% { transform: scale(1.2); }
-            70% { transform: scale(1); }
+            0%, 100% { transform: translate(-50%, -50%) scale(1); }
+            14% { transform: translate(-50%, -50%) scale(1.2); }
+            28% { transform: translate(-50%, -50%) scale(1); }
+            42% { transform: translate(-50%, -50%) scale(1.2); }
+            70% { transform: translate(-50%, -50%) scale(1); }
         }
         .heartbeat { animation: pulse-heartbeat 2s infinite; }
         
@@ -194,10 +194,10 @@
             .mobile-hero-p { background: transparent !important; border: none !important; box-shadow: none !important; padding-left: 0 !important; padding-right: 0 !important; }
             .mobile-graphic-container { margin-top: 3rem; margin-bottom: 2rem; }
             .mobile-trophy { top: -10px !important; left: -10px !important; }
-            .mobile-node-1 { left: 15% !important; }
-            .mobile-node-2 { left: 85% !important; }
-            .mobile-node-3 { left: 15% !important; }
-            .mobile-node-4 { left: 85% !important; }
+            .mobile-node-1 { left: 20% !important; }
+            .mobile-node-2 { left: 80% !important; }
+            .mobile-node-3 { left: 20% !important; }
+            .mobile-node-4 { left: 80% !important; }
             .mobile-node-text { font-size: 0.65rem !important; padding: 0.1rem 0.4rem !important; }
         }
     </style>
