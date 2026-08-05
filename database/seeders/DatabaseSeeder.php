@@ -22,14 +22,14 @@ class DatabaseSeeder extends Seeder
             \App\Models\Major::create(['name' => $major]);
         }
 
-        $admin = User::factory()->create([
+        $admin = User::create([
             'name' => 'Administrator',
             'email' => 'admin@belajaronline.com',
             'password' => bcrypt('password'),
             'role' => 'admin',
         ]);
 
-        $teacher = User::factory()->create([
+        $teacher = User::create([
             'name' => 'Budi Santoso',
             'email' => 'teacher@belajaronline.com',
             'password' => bcrypt('password'),
