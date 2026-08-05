@@ -38,13 +38,13 @@
 
                 <!-- Page Header (if any) -->
                 @isset($header)
-                    <div class="bg-white border-b border-slate-200 py-6 px-4 sm:px-8">
+                    <div class="glass border-b border-slate-200/50 py-6 px-4 sm:px-8 z-10 relative">
                         {{ $header }}
                     </div>
                 @endisset
 
                 <!-- Main Scrollable Content -->
-                <main class="flex-1 overflow-y-auto bg-slate-50 p-4 sm:p-8">
+                <main class="flex-1 overflow-y-auto bg-slate-50/50 p-4 sm:p-8 page-enter relative z-0">
                     {{ $slot }}
                 </main>
             </div>

@@ -96,11 +96,16 @@ class QuizController extends Controller
             }
         }
 
-        $score = null;
-        $isPassed = false;
-        
-        // Removed auto-grading per user request: 
-        // ALL quizzes must wait for teacher grading and feedback.
+        // Auto-grade if there are no essay questions
+        if (!$hasEssay) {
+            // Calculate score
+            $score = $totalQuestions > 0 ? round(($correctAnswers / $totalQuestions) * 100) : 0;
+            $isPassed = $score >= $quiz->passing_score;
+        } else {
+            // Wait for teacher grading
+            $score = null;
+            $isPassed = false;
+        }
 
         $attempt = QuizAttempt::create([
             'quiz_id' => $quiz->id,
@@ -118,7 +123,14 @@ class QuizController extends Controller
             \App\Models\QuizAttemptAnswer::insert($answersData);
         }
 
-        return redirect()->route('student.subjects.show', $quiz->subChapter->chapter->subject_id)
-            ->with('success', 'Kuis selesai! Jawaban Anda telah dikirim dan menunggu penilaian dari guru.');
+        if (!$hasEssay) {
+            // Auto award XP
+            $student->increment('xp', $isPassed ? 50 : 10);
+            return redirect()->route('student.subjects.show', $quiz->subChapter->chapter->subject_id)
+                ->with('success', 'Kuis selesai! Cek hasil belajarmu sekarang.');
+        } else {
+            return redirect()->route('student.subjects.show', $quiz->subChapter->chapter->subject_id)
+                ->with('success', 'Kuis selesai! Jawaban Anda telah dikirim dan menunggu penilaian dari guru.');
+        }
     }
 }

@@ -18,6 +18,12 @@
                             <x-input-error :messages="$errors->get('name')" class="mt-2" />
                         </div>
 
+                        <div>
+                            <x-input-label for="max_students" :value="__('Kapasitas Maksimal Siswa (max_students)')" />
+                            <x-text-input id="max_students" class="block mt-1 w-full" type="number" name="max_students" :value="old('max_students', 50)" required />
+                            <x-input-error :messages="$errors->get('max_students')" class="mt-2" />
+                        </div>
+
                         <div class="flex items-center gap-4">
                             <x-primary-button>{{ __('Save') }}</x-primary-button>
                             <a href="{{ route('admin.classes.index') }}" class="text-gray-600 hover:underline">Cancel</a>

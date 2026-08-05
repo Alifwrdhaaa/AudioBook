@@ -66,9 +66,6 @@
                             <p class="text-sm font-bold text-gray-500">Halo, Petualang!</p>
                             <p class="text-lg font-black text-sky-900 truncate">{{ $currentStudent->name ?? 'Siswa' }}</p>
                         </div>
-                        <a href="#" class="block px-6 py-4 font-bold text-gray-700 hover:bg-sky-50 flex items-center gap-3">
-                            <span class="text-xl">⚙️</span> Pengaturan
-                        </a>
                         <form method="POST" action="{{ route('student.logout') }}">
                             @csrf
                             <button type="submit" class="w-full text-left px-6 py-4 font-bold text-rose-600 hover:bg-rose-50 flex items-center gap-3">
@@ -95,9 +92,43 @@
     </nav>
 
     <!-- Main Content Area -->
-    <main class="flex-1 max-w-6xl mx-auto w-full pt-8 px-4 pb-32 md:pb-16 relative">
+    <main class="flex-1 max-w-6xl mx-auto w-full pt-8 px-4 pb-32 md:pb-16 relative page-enter">
         @yield('content')
     </main>
 
+    <!-- Confetti Trigger Script -->
+    <script type="module">
+        import confetti from 'https://cdn.skypack.dev/canvas-confetti';
+        window.fireConfetti = function() {
+            var duration = 3000;
+            var end = Date.now() + duration;
+
+            (function frame() {
+                confetti({
+                    particleCount: 5,
+                    angle: 60,
+                    spread: 55,
+                    origin: { x: 0 },
+                    colors: ['#58cc02', '#1cb0f6', '#ffc800', '#ff4b4b']
+                });
+                confetti({
+                    particleCount: 5,
+                    angle: 120,
+                    spread: 55,
+                    origin: { x: 1 },
+                    colors: ['#58cc02', '#1cb0f6', '#ffc800', '#ff4b4b']
+                });
+
+                if (Date.now() < end) {
+                    requestAnimationFrame(frame);
+                }
+            }());
+        };
+
+        // Fire on load if session has success message
+        @if(session('success'))
+            setTimeout(window.fireConfetti, 500);
+        @endif
+    </script>
 </body>
 </html>

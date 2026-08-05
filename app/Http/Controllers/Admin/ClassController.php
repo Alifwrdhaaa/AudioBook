@@ -24,9 +24,10 @@ class ClassController extends Controller
     {
         $request->validate([
             'name' => 'required|string|max:255',
+            'max_students' => 'required|integer|min:1',
         ]);
 
-        SchoolClass::create($request->only(['name']));
+        SchoolClass::create($request->only(['name', 'max_students']));
 
         return redirect()->route('admin.classes.index')->with('success', 'Class added successfully.');
     }
@@ -40,9 +41,10 @@ class ClassController extends Controller
     {
         $request->validate([
             'name' => 'required|string|max:255',
+            'max_students' => 'required|integer|min:1',
         ]);
 
-        $class->update($request->only(['name']));
+        $class->update($request->only(['name', 'max_students']));
 
         return redirect()->route('admin.classes.index')->with('success', 'Class updated successfully.');
     }

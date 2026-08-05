@@ -18,7 +18,9 @@ class SubjectController extends Controller
 
     public function create()
     {
-        $classes = SchoolClass::all();
+        $teacher = auth('teacher')->user();
+        assert($teacher instanceof \App\Models\User);
+        $classes = $teacher->taughtClasses()->get();
         $masterSubjects = \App\Models\MasterSubject::all();
         return view('teacher.subjects.create', compact('classes', 'masterSubjects'));
     }
@@ -44,7 +46,9 @@ class SubjectController extends Controller
         if ($subject->teacher_id !== auth()->id()) {
             abort(403);
         }
-        $classes = SchoolClass::all();
+        $teacher = auth('teacher')->user();
+        assert($teacher instanceof \App\Models\User);
+        $classes = $teacher->taughtClasses()->get();
         $masterSubjects = \App\Models\MasterSubject::all();
         return view('teacher.subjects.edit', compact('subject', 'classes', 'masterSubjects'));
     }

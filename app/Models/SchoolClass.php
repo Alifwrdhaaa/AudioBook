@@ -9,7 +9,7 @@ class SchoolClass extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name'];
+    protected $fillable = ['name', 'max_students'];
 
     public function students()
     {

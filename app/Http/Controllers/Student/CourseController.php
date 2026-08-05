@@ -51,7 +51,12 @@ class CourseController extends Controller
                                 ->first();
             return $progress && $progress->is_completed;
         } else {
-            return true; // We don't block materials based on quizzes for now, though it shouldn't happen.
+            // Previous node is a quiz, ensure it's passed
+            $attempt = \App\Models\QuizAttempt::where('student_id', $studentId)
+                                              ->where('quiz_id', $prevNode->id)
+                                              ->orderBy('created_at', 'desc')
+                                              ->first();
+            return $attempt && $attempt->is_passed;
         }
     }
 

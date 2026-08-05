@@ -27,7 +27,7 @@
             <!-- Stats Grid -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- Stat Card: Teachers -->
-                <div class="bg-white rounded-3xl p-6 border-4 border-slate-100 shadow-lg relative overflow-hidden group hover:-translate-y-2 hover:shadow-2xl transition-all duration-300">
+                <div class="bg-white rounded-3xl p-6 border-4 border-slate-100 shadow-lg relative overflow-hidden group hover-lift transition-all duration-300 page-enter" style="animation-delay: 100ms;">
                     <div class="absolute -right-4 -bottom-4 text-7xl opacity-5 group-hover:scale-110 transition-transform text-[#44936d]">👨‍🏫</div>
                     <div class="relative z-10 flex flex-col h-full justify-between">
                         <div class="w-12 h-12 rounded-full bg-emerald-100 flex items-center justify-center text-[#44936d] mb-4">
@@ -41,7 +41,7 @@
                 </div>
 
                 <!-- Stat Card: Students -->
-                <div class="bg-white rounded-3xl p-6 border-4 border-slate-100 shadow-lg relative overflow-hidden group hover:-translate-y-2 hover:shadow-2xl transition-all duration-300">
+                <div class="bg-white rounded-3xl p-6 border-4 border-slate-100 shadow-lg relative overflow-hidden group hover-lift transition-all duration-300 page-enter" style="animation-delay: 200ms;">
                     <div class="absolute -right-4 -bottom-4 text-7xl opacity-5 group-hover:scale-110 transition-transform text-[#44936d]">👨‍🎓</div>
                     <div class="relative z-10 flex flex-col h-full justify-between">
                         <div class="w-12 h-12 rounded-full bg-emerald-100 flex items-center justify-center text-[#44936d] mb-4">
@@ -55,7 +55,7 @@
                 </div>
 
                 <!-- Stat Card: Classes -->
-                <div class="bg-white rounded-3xl p-6 border-4 border-slate-100 shadow-lg relative overflow-hidden group hover:-translate-y-2 hover:shadow-2xl transition-all duration-300">
+                <div class="bg-white rounded-3xl p-6 border-4 border-slate-100 shadow-lg relative overflow-hidden group hover-lift transition-all duration-300 page-enter" style="animation-delay: 300ms;">
                     <div class="absolute -right-4 -bottom-4 text-7xl opacity-5 group-hover:scale-110 transition-transform text-emerald-500">🏫</div>
                     <div class="relative z-10 flex flex-col h-full justify-between">
                         <div class="w-12 h-12 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600 mb-4">
@@ -69,7 +69,7 @@
                 </div>
 
                 <!-- Stat Card: Modules -->
-                <div class="bg-white rounded-3xl p-6 border-4 border-slate-100 shadow-lg relative overflow-hidden group hover:-translate-y-2 hover:shadow-2xl transition-all duration-300">
+                <div class="bg-white rounded-3xl p-6 border-4 border-slate-100 shadow-lg relative overflow-hidden group hover-lift transition-all duration-300 page-enter" style="animation-delay: 400ms;">
                     <div class="absolute -right-4 -bottom-4 text-7xl opacity-5 group-hover:scale-110 transition-transform text-amber-500">📚</div>
                     <div class="relative z-10 flex flex-col h-full justify-between">
                         <div class="w-12 h-12 rounded-full bg-amber-100 flex items-center justify-center text-amber-600 mb-4">
