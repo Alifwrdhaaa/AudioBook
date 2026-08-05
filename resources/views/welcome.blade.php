@@ -194,11 +194,11 @@
             .mobile-hero-p { background: transparent !important; border: none !important; box-shadow: none !important; padding-left: 0 !important; padding-right: 0 !important; }
             .mobile-graphic-container { margin-top: 3rem; margin-bottom: 2rem; }
             .mobile-trophy { top: -10px !important; left: -10px !important; }
-            .mobile-node-1 { left: 30% !important; }
-            .mobile-node-2 { left: 70% !important; }
-            .mobile-node-3 { left: 25% !important; }
-            .mobile-node-4 { left: 75% !important; }
-            .mobile-node-text { font-size: 0.65rem !important; padding: 0.1rem 0.4rem !important; }
+            .mobile-node-1 { left: 50% !important; }
+            .mobile-node-2 { left: 50% !important; }
+            .mobile-node-3 { left: 50% !important; }
+            .mobile-node-4 { left: 50% !important; }
+            .mobile-node-text { font-size: 0.75rem !important; padding: 0.2rem 0.6rem !important; }
         }
     </style>
     <nav class="w-full bg-white/90 backdrop-blur-md border-b-4 border-gray-200 sticky top-0 z-50 transition-all shadow-sm">
