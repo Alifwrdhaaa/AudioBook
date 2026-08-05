@@ -187,8 +187,16 @@
 <body class="bg-white font-sans text-gray-800 antialiased overflow-x-hidden">
     
     <!-- Navbar -->
+    <style>
+        @media (max-width: 768px) {
+            .mobile-nav-pad { padding-left: 1rem; padding-right: 1rem; }
+            .mobile-btn { font-size: 0.75rem !important; padding-left: 1rem !important; padding-right: 1rem !important; }
+            .mobile-hero-p { background: transparent !important; border: none !important; box-shadow: none !important; padding-left: 0 !important; padding-right: 0 !important; }
+            .mobile-graphic-scale { transform: scale(0.6); margin-top: -2rem; }
+        }
+    </style>
     <nav class="w-full bg-white/90 backdrop-blur-md border-b-4 border-gray-200 sticky top-0 z-50 transition-all shadow-sm">
-        <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 h-16 md:h-20 flex items-center justify-between">
+        <div class="max-w-7xl mx-auto mobile-nav-pad sm:px-6 lg:px-8 h-16 md:h-20 flex items-center justify-between">
             
             <!-- Logo -->
             <div class="flex items-center">
@@ -215,8 +223,8 @@
 
             <!-- Action Button -->
             <div class="flex items-center">
-                <a href="{{ route('student.login') }}" class="inline-flex items-center justify-center bg-gradient-to-b from-[#58CC02] to-[#46A302] text-white font-black py-2 px-3 md:py-3 md:px-8 rounded-xl md:rounded-2xl shadow-[0_4px_0_0_#388201] md:shadow-[0_5px_0_0_#388201,0_10px_20px_rgba(88,204,2,0.3)] hover:brightness-110 active:shadow-[0_0px_0_0_#388201] active:translate-y-[4px] md:active:translate-y-[5px] uppercase tracking-widest text-[9px] md:text-sm transition-all group">
-                    <span class="mr-1 md:mr-2 group-hover:animate-bounce hidden sm:inline-block">🔥</span> MAIN
+                <a href="{{ route('student.login') }}" class="inline-flex items-center justify-center bg-gradient-to-b from-[#58CC02] to-[#46A302] text-white font-black py-2 md:py-3 md:px-8 rounded-xl md:rounded-2xl shadow-[0_4px_0_0_#388201] md:shadow-[0_5px_0_0_#388201,0_10px_20px_rgba(88,204,2,0.3)] hover:brightness-110 active:shadow-[0_0px_0_0_#388201] active:translate-y-[4px] md:active:translate-y-[5px] uppercase tracking-widest md:text-sm transition-all group mobile-btn">
+                    <span class="mr-1 md:mr-2 group-hover:animate-bounce inline-block">🔥</span> MAIN
                 </a>
             </div>
         </div>
@@ -246,7 +254,7 @@
                     <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#58CC02] to-[#1CB0F6] text-glow">seperti main game!</span>
                 </h1>
                 
-                <p class="text-lg md:text-2xl text-gray-600 font-bold mb-8 md:mb-10 max-w-lg mx-auto md:mx-0 leading-relaxed bg-white/50 backdrop-blur-md p-4 rounded-2xl border-2 border-white/60 shadow-sm">
+                <p class="text-lg md:text-2xl text-gray-600 font-bold mb-8 md:mb-10 max-w-lg mx-auto md:mx-0 leading-relaxed bg-white/50 backdrop-blur-md p-4 rounded-2xl border-2 border-white/60 shadow-sm mobile-hero-p">
                     Lupakan cara belajar yang membosankan. Kumpulkan <span class="text-[#FFD900] drop-shadow-md">poin</span>, jaga <span class="text-[#FF4B4B] drop-shadow-md">streak</span> harian, dan jadilah juara kelas!
                 </p>
                 
@@ -265,7 +273,7 @@
             </div>
             
             <!-- Graphic / Illustration -->
-            <div class="md:w-1/2 flex justify-center relative z-10 w-full">
+            <div class="md:w-1/2 flex justify-center relative z-10 w-full mobile-graphic-scale">
                 <!-- Orbit Ring -->
                 <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] md:w-[480px] md:h-[480px] border-[6px] border-dashed border-[#58CC02]/30 rounded-full animate-spin-slow" style="animation-duration: 30s;"></div>
                 
