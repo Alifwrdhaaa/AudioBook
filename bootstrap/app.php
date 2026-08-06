@@ -16,6 +16,11 @@ return Application::configure(basePath: dirname(__DIR__))
             'student' => \App\Http\Middleware\StudentMiddleware::class,
         ]);
 
+        $middleware->validateCsrfTokens(except: [
+            'logout',
+            'student/logout'
+        ]);
+
         $middleware->redirectUsersTo(function (\Illuminate\Http\Request $request) {
             if (\Illuminate\Support\Facades\Auth::guard('admin')->check()) {
                 return route('admin.dashboard');
