@@ -130,5 +130,6 @@
             setTimeout(window.fireConfetti, 500);
         @endif
     </script>
+    @stack('scripts')
 </body>
 </html>

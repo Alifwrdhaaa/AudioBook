@@ -35,7 +35,7 @@
     </div>
 
     <!-- Map Path Area -->
-    <div class="relative max-w-3xl mx-auto py-10 z-10 min-h-[500px]">
+    <div id="dashboard-map-area" class="relative max-w-3xl mx-auto py-10 z-10 min-h-[500px]">
         
         <!-- Animated Background Companions -->
         <div class="absolute top-10 -left-10 md:-left-32 text-7xl animate-[float_5s_ease-in-out_infinite] opacity-60 pointer-events-none drop-shadow-lg hidden md:block">🛸</div>
@@ -122,3 +122,38 @@
         @endif
     </div>
 @endsection
+
+@push('scripts')
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Simple and robust AJAX polling for the dashboard map
+        setInterval(function() {
+            fetch(window.location.href, {
+                headers: {
+                    'X-Requested-With': 'XMLHttpRequest',
+                    'Accept': 'text/html'
+                }
+            })
+            .then(response => response.text())
+            .then(html => {
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(html, 'text/html');
+                const newContent = doc.getElementById('dashboard-map-area');
+                const currentContent = document.getElementById('dashboard-map-area');
+                
+                if (newContent && currentContent) {
+                    if (newContent.innerHTML !== currentContent.innerHTML) {
+                        currentContent.innerHTML = newContent.innerHTML;
+                        
+                        currentContent.classList.add('opacity-50', 'transition-opacity', 'duration-500');
+                        setTimeout(() => {
+                            currentContent.classList.remove('opacity-50');
+                        }, 100);
+                    }
+                }
+            })
+            .catch(error => console.error('Gagal mengambil pembaruan peta:', error));
+        }, 15000); // 15 seconds
+    });
+</script>
+@endpush

@@ -19,7 +19,7 @@
                 <div class="absolute -bottom-4 -right-4 text-8xl opacity-20 transform rotate-12">📚</div>
             </div>
 
-            <div class="space-y-12">
+            <div id="quest-map-content" class="space-y-12">
                 @forelse($subject->chapters as $chapter)
                     <div class="relative">
                         <!-- Chapter Header -->
@@ -141,3 +141,44 @@
         </div>
     </div>
 @endsection
+
+@push('scripts')
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Simple and robust AJAX polling for shared hosting (cPanel)
+        // Checks for new materials/quizzes every 15 seconds without refreshing the page
+        setInterval(function() {
+            fetch(window.location.href, {
+                headers: {
+                    'X-Requested-With': 'XMLHttpRequest',
+                    'Accept': 'text/html'
+                }
+            })
+            .then(response => response.text())
+            .then(html => {
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(html, 'text/html');
+                const newContent = doc.getElementById('quest-map-content');
+                const currentContent = document.getElementById('quest-map-content');
+                
+                if (newContent && currentContent) {
+                    // Check if content actually changed (ignoring dynamic CSRF tokens if any)
+                    if (newContent.innerHTML !== currentContent.innerHTML) {
+                        currentContent.innerHTML = newContent.innerHTML;
+                        
+                        // Optional: Show a subtle notification or play a sound
+                        console.log('Misi baru dari Guru telah tiba!');
+                        
+                        // Add a subtle flash effect to indicate update
+                        currentContent.classList.add('opacity-50', 'transition-opacity', 'duration-500');
+                        setTimeout(() => {
+                            currentContent.classList.remove('opacity-50');
+                        }, 100);
+                    }
+                }
+            })
+            .catch(error => console.error('Gagal mengambil pembaruan real-time:', error));
+        }, 15000); // 15 seconds
+    });
+</script>
+@endpush
