@@ -64,6 +64,9 @@ class StudentAuthController extends Controller
 
         // Store in session
         $request->session()->put('student_id', $student->id);
+        
+        // Set permanent cookie (5 years) to prevent logout
+        \Illuminate\Support\Facades\Cookie::queue('remember_student_id', $student->id, 2628000);
 
         return redirect()->route('student.dashboard');
     }
@@ -71,6 +74,7 @@ class StudentAuthController extends Controller
     public function logout(Request $request)
     {
         $request->session()->forget('student_id');
+        \Illuminate\Support\Facades\Cookie::queue(\Illuminate\Support\Facades\Cookie::forget('remember_student_id'));
         return redirect()->route('student.login');
     }
 }

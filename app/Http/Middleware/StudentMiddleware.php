@@ -17,7 +17,18 @@ class StudentMiddleware
     public function handle(Request $request, Closure $next): Response
     {
         if (!$request->session()->has('student_id')) {
-            return redirect()->route('student.login');
+            if ($request->hasCookie('remember_student_id')) {
+                $studentId = $request->cookie('remember_student_id');
+                $student = Student::find($studentId);
+                if ($student) {
+                    $request->session()->put('student_id', $student->id);
+                } else {
+                    \Illuminate\Support\Facades\Cookie::queue(\Illuminate\Support\Facades\Cookie::forget('remember_student_id'));
+                    return redirect()->route('student.login');
+                }
+            } else {
+                return redirect()->route('student.login');
+            }
         }
         
         $student = Student::find($request->session()->get('student_id'));

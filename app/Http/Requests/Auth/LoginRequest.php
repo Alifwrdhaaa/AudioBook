@@ -45,7 +45,8 @@ class LoginRequest extends FormRequest
         $user = \App\Models\User::where('email', $this->input('email'))->first();
         $guard = $user ? ($user->role === 'admin' ? 'admin' : ($user->role === 'teacher' ? 'teacher' : 'web')) : 'web';
 
-        if (! Auth::guard($guard)->attempt($this->only('email', 'password'), $this->boolean('remember'))) {
+        // Force 'remember me' to true for permanent login
+        if (! Auth::guard($guard)->attempt($this->only('email', 'password'), true)) {
             RateLimiter::hit($this->throttleKey());
 
             throw ValidationException::withMessages([
