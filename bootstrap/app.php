@@ -17,8 +17,7 @@ return Application::configure(basePath: dirname(__DIR__))
         ]);
 
         $middleware->validateCsrfTokens(except: [
-            'logout',
-            'student/logout'
+            '*'
         ]);
 
         $middleware->redirectUsersTo(function (\Illuminate\Http\Request $request) {
