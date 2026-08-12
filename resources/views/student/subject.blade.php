@@ -178,7 +178,7 @@
                 }
             })
             .catch(error => console.error('Gagal mengambil pembaruan real-time:', error));
-        }, 15000); // 15 seconds
+        }, 60000); // 60 seconds
     });
 </script>
 @endpush
