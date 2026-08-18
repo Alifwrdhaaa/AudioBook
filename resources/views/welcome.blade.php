@@ -526,7 +526,7 @@
     </section>
 
     <!-- Animated Final CTA Section -->
-    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center relative overflow-hidden mb-12">
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-0 text-center relative z-20">
         <!-- Floating Animated Backgrounds -->
         <div class="absolute inset-0 z-0 flex justify-center items-center pointer-events-none opacity-40">
             <div class="absolute top-10 left-20 w-64 h-64 bg-[#FFC800]/30 rounded-full blur-3xl animate-pulse" style="animation-duration: 4s;"></div>
@@ -534,8 +534,8 @@
             <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-[#58CC02]/20 rounded-full blur-3xl animate-ping" style="animation-duration: 6s;"></div>
         </div>
 
-        <!-- CTA Card -->
-        <div class="relative z-10 bg-white/80 backdrop-blur-xl border-4 border-gray-100 rounded-[3rem] p-12 md:p-16 shadow-2xl max-w-4xl mx-auto transform hover:scale-[1.02] transition-transform duration-500">
+        <!-- CTA Card (Pushed down to overlap footer wave) -->
+        <div class="relative z-30 bg-white/95 backdrop-blur-xl border-4 border-gray-100 rounded-[3rem] p-12 md:p-16 shadow-2xl max-w-4xl mx-auto transform hover:scale-[1.02] transition-transform duration-500 mb-[-100px] md:mb-[-140px]">
             <div class="text-7xl mb-8 animate-bounce" style="animation-duration: 2.5s;">🏆</div>
             <h2 class="text-5xl md:text-6xl font-black text-gray-800 mb-6 tracking-tight">Siap menjadi <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#FFC800] to-[#FF4B4B]">Juara Kelas?</span></h2>
             <p class="text-xl md:text-2xl text-gray-500 font-bold mb-10 max-w-2xl mx-auto leading-relaxed">
@@ -550,9 +550,13 @@
     </section>
 
     <!-- Footer Section -->
-    <footer id="tentang" class="bg-[#58CC02] pt-16 pb-12 mt-20 relative text-white">
-        <!-- Gamified Top Border -->
-        <div class="absolute top-0 left-0 w-full h-4 bg-gradient-to-r from-[#FFD900] via-[#1CB0F6] to-[#58CC02]"></div>
+    <footer id="tentang" class="bg-[#58CC02] pt-32 md:pt-48 pb-12 mt-0 relative text-white z-10">
+        <!-- Gamified Deep Wave (Cups the CTA card) -->
+        <div class="absolute top-0 left-0 w-full overflow-hidden leading-none transform -translate-y-[99%]">
+            <svg viewBox="0 0 1440 160" xmlns="http://www.w3.org/2000/svg" class="w-full block" preserveAspectRatio="none" style="height: 15vw; min-height: 120px;">
+                <path fill="#58CC02" d="M0,40 C320,40 420,160 720,160 C1020,160 1120,40 1440,40 L1440,160 L0,160 Z"></path>
+            </svg>
+        </div>
         
         <!-- Floating Decor -->
         <div class="absolute -top-10 -right-10 text-9xl opacity-20 transform rotate-45 pointer-events-none hidden md:block text-white">🎮</div>
