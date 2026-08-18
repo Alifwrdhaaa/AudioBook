@@ -525,67 +525,34 @@
 
     </section>
 
-    <!-- Animated Final CTA Section (Duolingo Style) -->
-    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-0 text-center relative z-20">
-        <!-- Text and Button -->
-        <h2 class="text-4xl md:text-5xl font-black text-[#58CC02] mb-8 tracking-tighter leading-tight drop-shadow-sm">
-            belajar seru dan <br> asyik dengan audiobook
-        </h2>
-        
-        <a href="{{ route('login') }}" class="inline-block bg-[#58CC02] text-white font-black py-4 px-16 rounded-2xl text-xl shadow-[0_6px_0_0_#46A302] hover:bg-[#61E002] active:shadow-[0_0px_0_0_#46A302] active:translate-y-[6px] transition-all uppercase tracking-widest relative z-30 mb-4">
-            Mulai
-        </a>
+    <!-- Animated Final CTA Section -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center relative overflow-hidden mb-12">
+        <!-- Floating Animated Backgrounds -->
+        <div class="absolute inset-0 z-0 flex justify-center items-center pointer-events-none opacity-40">
+            <div class="absolute top-10 left-20 w-64 h-64 bg-[#FFC800]/30 rounded-full blur-3xl animate-pulse" style="animation-duration: 4s;"></div>
+            <div class="absolute bottom-10 right-20 w-72 h-72 bg-[#1CB0F6]/30 rounded-full blur-3xl animate-pulse" style="animation-duration: 5s; animation-delay: 1s;"></div>
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-[#58CC02]/20 rounded-full blur-3xl animate-ping" style="animation-duration: 6s;"></div>
+        </div>
 
-        <!-- Illustration Area (Overlaps the green wave) -->
-        <div class="relative mt-8 max-w-5xl mx-auto h-64 md:h-80 z-30 pointer-events-none">
-            <!-- Center Phone/Book Graphic -->
-            <div class="absolute left-1/2 bottom-[-80px] md:bottom-[-100px] transform -translate-x-1/2 w-56 md:w-72 z-40">
-                <div class="bg-white border-[6px] border-[#58CC02] rounded-t-[3rem] h-72 md:h-80 w-full relative overflow-hidden shadow-2xl flex items-end justify-center pb-4">
-                    <!-- Screen Mockup Elements -->
-                    <div class="absolute top-6 left-1/2 transform -translate-x-1/2 w-3/4 h-12 bg-[#FFD900] rounded-full rotate-6 opacity-90 shadow-sm"></div>
-                    <div class="absolute top-24 left-1/2 transform -translate-x-1/2 w-1/2 h-8 bg-[#1CB0F6] rounded-full -rotate-3 opacity-90 shadow-sm"></div>
-                    <!-- Mascot Emoji -->
-                    <div class="text-[6rem] animate-bounce" style="animation-duration: 3s;">🦉</div> 
-                </div>
-            </div>
-
-            <!-- Floating Decorative Elements -->
-            <!-- Left Side -->
-            <div class="absolute top-10 left-[10%] md:left-[15%] text-6xl md:text-7xl animate-[float_4s_ease-in-out_infinite] z-20 transform -rotate-12">
-                📦
-            </div>
-            <div class="absolute top-32 left-[2%] md:left-[5%] text-4xl md:text-5xl animate-[float_5s_ease-in-out_infinite_0.5s] z-20 transform rotate-12">
-                💎
-            </div>
-            <div class="absolute top-48 left-[20%] md:left-[25%] text-5xl md:text-6xl animate-[float_3s_ease-in-out_infinite_1s] z-20">
-                🪙
-            </div>
-            <div class="absolute top-20 left-[30%] md:left-[35%] w-12 h-5 md:w-16 md:h-6 bg-[#FF4B4B] rounded-full rotate-45 animate-[wiggle_4s_ease-in-out_infinite] z-20"></div>
-            <div class="absolute top-60 left-[5%] md:left-[10%] text-3xl text-yellow-400 animate-ping z-20">✨</div>
-
-            <!-- Right Side -->
-            <div class="absolute top-5 right-[10%] md:right-[15%] text-6xl md:text-7xl animate-[float_3.5s_ease-in-out_infinite] z-20 transform rotate-12">
-                🔥
-            </div>
-            <div class="absolute top-28 right-[25%] md:right-[30%] text-5xl md:text-6xl animate-[pulse_2s_ease-in-out_infinite] z-20">
-                ❤️
-            </div>
-            <div class="absolute top-40 right-[5%] md:right-[8%] text-4xl md:text-5xl animate-[float_4.5s_ease-in-out_infinite_0.2s] z-20 transform -rotate-12">
-                👑
-            </div>
-            <div class="absolute top-52 right-[20%] md:right-[25%] w-10 h-10 md:w-14 md:h-14 bg-[#1CB0F6] rounded-full animate-[pop_3s_ease-in-out_infinite] z-20 shadow-lg"></div>
-            <div class="absolute top-16 right-[35%] md:right-[40%] text-4xl text-[#58CC02] animate-pulse z-20">✦</div>
+        <!-- CTA Card -->
+        <div class="relative z-10 bg-white/80 backdrop-blur-xl border-4 border-gray-100 rounded-[3rem] p-12 md:p-16 shadow-2xl max-w-4xl mx-auto transform hover:scale-[1.02] transition-transform duration-500">
+            <div class="text-7xl mb-8 animate-bounce" style="animation-duration: 2.5s;">🏆</div>
+            <h2 class="text-5xl md:text-6xl font-black text-gray-800 mb-6 tracking-tight">Siap menjadi <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#FFC800] to-[#FF4B4B]">Juara Kelas?</span></h2>
+            <p class="text-xl md:text-2xl text-gray-500 font-bold mb-10 max-w-2xl mx-auto leading-relaxed">
+                Ribuan poin XP, lencana (badge) eksklusif, dan peringkat puncak di papan peringkat menunggumu.
+            </p>
+            <a href="{{ route('login') }}" class="inline-block bg-[#58CC02] text-white font-black py-5 px-12 rounded-2xl text-2xl shadow-[0_8px_0_0_#46A302] hover:bg-[#61E002] active:shadow-[0_0px_0_0_#46A302] active:translate-y-[8px] transition-all uppercase tracking-widest relative overflow-hidden group">
+                <span class="relative z-10">Mulai Belajar Sekarang</span>
+                <!-- Shine effect -->
+                <div class="absolute top-0 -inset-full h-full w-1/2 z-5 block transform -skew-x-12 bg-gradient-to-r from-transparent to-white opacity-20 group-hover:animate-[shine_1.5s_ease-in-out_infinite]"></div>
+            </a>
         </div>
     </section>
 
     <!-- Footer Section -->
-    <footer id="tentang" class="bg-[#58CC02] pt-16 pb-12 mt-12 md:mt-24 relative text-white">
-        <!-- Gamified Deep Wave -->
-        <div class="absolute top-0 left-0 w-full overflow-hidden leading-none transform -translate-y-[99%]">
-            <svg viewBox="0 0 1440 160" xmlns="http://www.w3.org/2000/svg" class="w-full block" preserveAspectRatio="none" style="height: 12vw; min-height: 80px;">
-                <path fill="#58CC02" d="M0,40 C320,40 420,160 720,160 C1020,160 1120,40 1440,40 L1440,160 L0,160 Z"></path>
-            </svg>
-        </div>
+    <footer id="tentang" class="bg-[#58CC02] pt-16 pb-12 mt-20 relative text-white">
+        <!-- Gamified Top Border -->
+        <div class="absolute top-0 left-0 w-full h-4 bg-gradient-to-r from-[#FFD900] via-[#1CB0F6] to-[#58CC02]"></div>
         
         <!-- Floating Decor -->
         <div class="absolute -top-10 -right-10 text-9xl opacity-20 transform rotate-45 pointer-events-none hidden md:block text-white">🎮</div>
