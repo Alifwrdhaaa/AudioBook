@@ -11,7 +11,7 @@
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
                     <a href="{{ $dashboardRoute }}" class="text-3xl font-black text-indigo-600 tracking-tight hover:scale-105 transition-transform flex items-center gap-2">
-                        BelajarOnline
+                        AudioBook
                     </a>
                 </div>
 

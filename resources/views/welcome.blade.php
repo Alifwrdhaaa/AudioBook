@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
-    <title>Belajar Online - Cara Paling Seru Belajar Apapun!</title>
+    <title>AudioBook - Cara Paling Seru Belajar Apapun!</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <style>
@@ -213,7 +213,7 @@
             <!-- Logo -->
             <div class="flex items-center">
                 <a href="#" class="text-xl md:text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#58CC02] to-[#1CB0F6] tracking-tight hover:scale-105 transition-transform flex items-center gap-1 md:gap-2 drop-shadow-sm mobile-logo">
-                    BelajarOnline <span class="text-lg md:text-2xl filter drop-shadow-md">✨</span>
+                    AudioBook <span class="text-lg md:text-2xl filter drop-shadow-md">✨</span>
                 </a>
             </div>
             
@@ -564,7 +564,7 @@
             <!-- Brand Column -->
             <div class="flex flex-col space-y-6 md:w-1/3">
                 <div class="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#58CC02] to-[#1CB0F6] tracking-tight drop-shadow-md flex items-center">
-                    BelajarOnline <span class="text-3xl ml-2">✨</span>
+                    AudioBook <span class="text-3xl ml-2">✨</span>
                 </div>
                 <p class="text-slate-400 font-medium leading-relaxed text-base pr-8">
                     Platform pembelajaran berbasis gamifikasi terbaik untuk membantu siswa meraih potensi maksimal mereka dengan cara yang paling seru dan tidak membosankan.
@@ -612,7 +612,7 @@
         
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-20 pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center text-slate-500 font-bold relative z-10">
             <div class="mb-4 md:mb-0 text-sm">
-                © 2026 BelajarOnline. Seluruh hak cipta dilindungi.
+                © 2026 AudioBook. Seluruh hak cipta dilindungi.
             </div>
             <div class="flex items-center space-x-2 bg-slate-800/50 px-4 py-2 rounded-full border border-slate-700">
                 <span class="text-sm">Dibuat dengan</span>

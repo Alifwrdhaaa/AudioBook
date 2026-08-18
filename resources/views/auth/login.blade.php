@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Masuk Staff - Belajar Online</title>
+    <title>Masuk Staff - AudioBook</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="bg-slate-50 font-sans antialiased flex items-center justify-center min-h-screen relative overflow-hidden">

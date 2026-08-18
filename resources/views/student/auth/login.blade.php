@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Masuk Belajar - BelajarOnline</title>
+    <title>Masuk Belajar - AudioBook</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <style>
@@ -65,7 +65,7 @@
         <!-- Logo / Title -->
         <div class="text-center mb-8">
             <h1 class="text-5xl font-black text-white drop-shadow-[0_4px_4px_rgba(0,0,0,0.15)] tracking-wide mb-2">
-                BelajarOnline
+                AudioBook
             </h1>
             <p class="text-xl font-bold text-sky-800">Petualangan Ilmu Dimulai! 🚀</p>
         </div>
