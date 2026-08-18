@@ -551,22 +551,26 @@
 
     <!-- Footer -->
     <!-- Footer Section -->
-    <footer id="tentang" class="bg-[#0F172A] pt-24 pb-12 mt-20 relative overflow-hidden">
+    <footer id="tentang" class="bg-[#58CC02] pt-16 pb-12 mt-32 relative text-white">
         <!-- Gamified Top Border / Wave -->
-        <div class="absolute top-0 left-0 w-full h-4 bg-gradient-to-r from-[#FFD900] via-[#1CB0F6] to-[#58CC02]"></div>
+        <div class="absolute top-0 left-0 w-full overflow-hidden leading-none transform -translate-y-[99%]">
+            <svg viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg" class="w-full block" preserveAspectRatio="none" style="height: 6vw; min-height: 40px;">
+                <path fill="#58CC02" d="M0,60 C280,60 400,120 720,120 C1040,120 1160,60 1440,60 L1440,120 L0,120 Z"></path>
+            </svg>
+        </div>
         
         <!-- Floating Decor -->
-        <div class="absolute -top-10 -right-10 text-9xl opacity-10 transform rotate-45 pointer-events-none hidden md:block">🎮</div>
-        <div class="absolute bottom-20 -left-10 text-8xl opacity-10 transform -rotate-12 pointer-events-none hidden md:block">🚀</div>
+        <div class="absolute -top-10 -right-10 text-9xl opacity-20 transform rotate-45 pointer-events-none hidden md:block text-white">🎮</div>
+        <div class="absolute bottom-20 -left-10 text-8xl opacity-20 transform -rotate-12 pointer-events-none hidden md:block text-white">🚀</div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between gap-16 md:gap-8 text-sm font-extrabold relative z-10">
             
             <!-- Brand Column -->
             <div class="flex flex-col space-y-6 md:w-1/3">
-                <div class="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#58CC02] to-[#1CB0F6] tracking-tight drop-shadow-md flex items-center">
+                <div class="text-4xl font-black text-white tracking-tight drop-shadow-md flex items-center">
                     AudioBook <span class="text-3xl ml-2">✨</span>
                 </div>
-                <p class="text-slate-400 font-medium leading-relaxed text-base pr-8">
+                <p class="text-white/90 font-medium leading-relaxed text-base pr-8">
                     Platform pembelajaran berbasis gamifikasi terbaik untuk membantu siswa meraih potensi maksimal mereka dengan cara yang paling seru dan tidak membosankan.
                 </p>
             </div>
@@ -574,49 +578,49 @@
             <div class="flex flex-wrap gap-12 md:gap-20">
                 <!-- Column 1 -->
                 <div class="flex flex-col space-y-4">
-                    <div class="text-slate-300 tracking-widest uppercase mb-4 text-xs font-black">Sistem Belajar</div>
-                    <a href="#" class="text-slate-400 hover:text-[#FFD900] transition-colors flex items-center group">
-                        <span class="opacity-0 group-hover:opacity-100 mr-2 transition-opacity">▶</span> Metode Sekuensial
+                    <div class="text-white/70 tracking-widest uppercase mb-4 text-xs font-black">Sistem Belajar</div>
+                    <a href="#" class="text-white hover:text-[#FFD900] transition-colors flex items-center group">
+                        <span class="opacity-0 group-hover:opacity-100 mr-2 transition-opacity text-[#FFD900]">▶</span> Metode Sekuensial
                     </a>
-                    <a href="#" class="text-slate-400 hover:text-[#FFD900] transition-colors flex items-center group">
-                        <span class="opacity-0 group-hover:opacity-100 mr-2 transition-opacity">▶</span> Kurikulum Sekolah
+                    <a href="#" class="text-white hover:text-[#FFD900] transition-colors flex items-center group">
+                        <span class="opacity-0 group-hover:opacity-100 mr-2 transition-opacity text-[#FFD900]">▶</span> Kurikulum Sekolah
                     </a>
-                    <a href="#" class="text-slate-400 hover:text-[#FFD900] transition-colors flex items-center group">
-                        <span class="opacity-0 group-hover:opacity-100 mr-2 transition-opacity">▶</span> Sistem Poin & XP
+                    <a href="#" class="text-white hover:text-[#FFD900] transition-colors flex items-center group">
+                        <span class="opacity-0 group-hover:opacity-100 mr-2 transition-opacity text-[#FFD900]">▶</span> Sistem Poin & XP
                     </a>
                 </div>
                 
                 <!-- Column 2 -->
                 <div class="flex flex-col space-y-4">
-                    <div class="text-slate-300 tracking-widest uppercase mb-4 text-xs font-black">Panduan Platform</div>
-                    <a href="{{ route('login') }}?role=teacher" class="flex items-center text-slate-400 hover:text-[#1CB0F6] transition-colors group">
-                        <span class="mr-3 group-hover:scale-125 transition-transform text-xl text-[#1CB0F6]">👨‍🏫</span> Portal Guru
+                    <div class="text-white/70 tracking-widest uppercase mb-4 text-xs font-black">Panduan Platform</div>
+                    <a href="{{ route('login') }}?role=teacher" class="flex items-center text-white hover:text-[#FFD900] transition-colors group">
+                        <span class="mr-3 group-hover:scale-125 transition-transform text-xl">👨‍🏫</span> Portal Guru
                     </a>
-                    <a href="{{ route('login') }}?role=admin" class="flex items-center text-slate-400 hover:text-[#FF4B4B] transition-colors group">
-                        <span class="mr-3 group-hover:scale-125 transition-transform text-xl text-[#FF4B4B]">⚙️</span> Portal Admin
+                    <a href="{{ route('login') }}?role=admin" class="flex items-center text-white hover:text-[#FFD900] transition-colors group">
+                        <span class="mr-3 group-hover:scale-125 transition-transform text-xl">⚙️</span> Portal Admin
                     </a>
-                    <a href="#" class="flex items-center text-slate-400 hover:text-slate-200 transition-colors mt-2">
+                    <a href="#" class="flex items-center text-white hover:text-[#FFD900] transition-colors mt-2">
                         Tanya Jawab (FAQ)
                     </a>
                 </div>
                 
                 <!-- Column 3 -->
                 <div class="flex flex-col space-y-4">
-                    <div class="text-slate-300 tracking-widest uppercase mb-4 text-xs font-black">Bantuan & Legal</div>
-                    <a href="#" class="text-slate-400 hover:text-white transition-colors">Pusat Bantuan</a>
-                    <a href="#" class="text-slate-400 hover:text-white transition-colors">Ketentuan Layanan</a>
-                    <a href="#" class="text-slate-400 hover:text-white transition-colors">Kebijakan Privasi</a>
+                    <div class="text-white/70 tracking-widest uppercase mb-4 text-xs font-black">Bantuan & Legal</div>
+                    <a href="#" class="text-white hover:text-[#FFD900] transition-colors">Pusat Bantuan</a>
+                    <a href="#" class="text-white hover:text-[#FFD900] transition-colors">Ketentuan Layanan</a>
+                    <a href="#" class="text-white hover:text-[#FFD900] transition-colors">Kebijakan Privasi</a>
                 </div>
             </div>
         </div>
         
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-20 pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center text-slate-500 font-bold relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-20 pt-8 border-t border-white/30 flex flex-col md:flex-row justify-between items-center text-white/90 font-bold relative z-10">
             <div class="mb-4 md:mb-0 text-sm">
                 © 2026 AudioBook. Seluruh hak cipta dilindungi.
             </div>
-            <div class="flex items-center space-x-2 bg-slate-800/50 px-4 py-2 rounded-full border border-slate-700">
+            <div class="flex items-center space-x-2 bg-black/10 px-4 py-2 rounded-full border border-white/30">
                 <span class="text-sm">Dibuat dengan</span>
-                <span class="text-[#58CC02] animate-bounce text-lg">💚</span>
+                <span class="text-[#FFD900] animate-bounce text-lg">💛</span>
                 <span class="text-sm">untuk Pendidikan</span>
             </div>
         </div>
