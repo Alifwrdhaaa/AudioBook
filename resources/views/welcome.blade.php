@@ -541,7 +541,7 @@
             <p class="text-xl md:text-2xl text-gray-500 font-bold mb-10 max-w-2xl mx-auto leading-relaxed">
                 Ribuan poin XP, lencana (badge) eksklusif, dan peringkat puncak di papan peringkat menunggumu.
             </p>
-            <a href="{{ route('login') }}" class="inline-block bg-[#58CC02] text-white font-black py-5 px-12 rounded-2xl text-2xl shadow-[0_8px_0_0_#46A302] hover:bg-[#61E002] active:shadow-[0_0px_0_0_#46A302] active:translate-y-[8px] transition-all uppercase tracking-widest relative overflow-hidden group">
+            <a href="{{ route('student.login') }}" class="inline-block bg-[#58CC02] text-white font-black py-5 px-12 rounded-2xl text-2xl shadow-[0_8px_0_0_#46A302] hover:bg-[#61E002] active:shadow-[0_0px_0_0_#46A302] active:translate-y-[8px] transition-all uppercase tracking-widest relative overflow-hidden group">
                 <span class="relative z-10">Mulai Belajar Sekarang</span>
                 <!-- Shine effect -->
                 <div class="absolute top-0 -inset-full h-full w-1/2 z-5 block transform -skew-x-12 bg-gradient-to-r from-transparent to-white opacity-20 group-hover:animate-[shine_1.5s_ease-in-out_infinite]"></div>
